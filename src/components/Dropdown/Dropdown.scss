@@ -1,0 +1,78 @@
+// src/components/Dropdown/Dropdown.scss
+
+.dropdownContainer {
+  position: relative;
+  width: 200px;
+  margin: 20px auto;
+}
+
+.dropdownLabel {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.infoIcon {
+  margin-right: 5px;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.filled {
+  border-color: green;
+}
+
+.disabled {
+  border-color: grey;
+  cursor: not-allowed;
+}
+
+.error {
+  border-color: red;
+}
+
+.leftIcon {
+  margin-right: 5px;
+}
+
+.dropdownInput {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  z-index: 1;
+}
+
+.dropdownItem {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdownItem.active {
+  background: #f0f0f0;
+}
+
+.dropdownItem:hover {
+  background: #e0e0e0;
+}
+
+.helperText {
+  margin-top: 5px;
+  font-size: 12px;
+  color: grey;
+}

@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
 
-function App() {
+import React from "react";
+import Dropdown from "./components/Dropdown/Dropdown";
+import "./App.css";
+
+const App = () => {
+  const handleSelect = (item) => {
+    console.log("Selected item:", item);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Dropdown Component Demo</h1>
+      <Dropdown
+        label="Select an option"
+        labelVisibility="Visible"
+        status="Unfilled"
+        labelIconVisibility="Visible"
+        leftIconVisibility="Visible"
+        helperText="Please select an option from the dropdown"
+        required="No"
+        text=""
+        type="SingleNoIcon"
+        activeItemIndex={-1}
+        items={["Option 1", "Option 2", "Option 3"]}
+        onSelect={handleSelect}
+      />
     </div>
   );
-}
+};
 
 export default App;
